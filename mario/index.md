@@ -1,6 +1,6 @@
 # Informativa sulla privacy, app "Mario De Martino Barber Salon"
 
-*Ultimo aggiornamento: [GG/MM/AAAA]*
+*Ultimo aggiornamento: 01/11/2026*
 
 
 Questa informativa spiega quali dati personali tratta l'app "Mario De Martino Barber Salon" (di seguito "l'app"),
@@ -9,15 +9,15 @@ perché, per quanto tempo e quali diritti hai, ai sensi del Regolamento (UE) 201
 ## 1. Chi tratta i tuoi dati
 
 **Titolare del trattamento**: Mario De Martino, titolare della ditta individuale *Barber Salon da Mario De Martino*,
-[via e numero civico], Salerno (SA), P. IVA 05117800655, email [email del salone], telefono [telefono].
+Via Posidonia 50, 84127 Salerno (SA), P. IVA 05117800655, telefono +39 327 7358645.
 Il salone decide come usare i dati delle prenotazioni e della propria rubrica clienti.
 
-**Gestore tecnico dell'app**: Luigi De Martino, [email], che ha sviluppato l'app e la gestisce per conto del salone
+**Gestore tecnico dell'app**: Luigi De Martino, email l.demartino18@gmail.com, che ha sviluppato l'app e la gestisce per conto del salone
 (responsabile del trattamento, art. 28 GDPR). Il tuo account (email, password, nome, telefono) è gestito da Luigi De
 Martino, che lo tratta anche come titolare autonomo, perché lo stesso account può essere usato in altre app di
 prenotazione realizzate da lui per altri saloni. Ogni salone vede soltanto i propri clienti e le proprie prenotazioni.
 
-Per qualsiasi richiesta sulla privacy puoi scrivere a [email di riferimento].
+Per qualsiasi richiesta sulla privacy puoi scrivere a l.demartino18@gmail.com (che la inoltra al salone quando riguarda i suoi dati) oppure contattare il salone al numero o all'indirizzo indicati sopra.
 
 ## 2. Quali dati trattiamo
 
@@ -70,7 +70,7 @@ Per far funzionare l'app ci appoggiamo a questi fornitori, che trattano i dati s
 | Supabase Inc. | database e autenticazione | server nell'Unione europea |
 | Expo (650 Industries Inc.) | invio delle notifiche | Stati Uniti |
 | Apple (APNs) e Google (Firebase Cloud Messaging) | consegna delle notifiche al telefono | Stati Uniti / UE |
-| [Resend Inc.] | invio delle email di servizio | [Stati Uniti] |
+| Resend Inc. | invio delle email di servizio | Stati Uniti |
 | GitHub Inc. | conservazione delle copie di sicurezza cifrate | Stati Uniti |
 | Apple / Google | accesso con Apple o Google, se lo scegli | Stati Uniti / UE |
 
@@ -81,7 +81,7 @@ contrattuali standard approvate dalla Commissione europea.
 
 Puoi in qualsiasi momento chiedere **accesso** ai tuoi dati, **rettifica**, **cancellazione**, **limitazione**,
 **portabilità**, **opposizione** al trattamento basato sul legittimo interesse e **revocare** i consensi dati,
-scrivendo a [email di riferimento]. Risponderemo entro 30 giorni.
+scrivendo a l.demartino18@gmail.com o contattando il salone. Risponderemo entro 30 giorni.
 
 **Eliminare l'account**: dall'app, *Profilo → Elimina account*. L'account e i dati collegati vengono cancellati; le
 prenotazioni passate restano al salone solo in forma anonima (senza nome né telefono) per i suoi conteggi, e
