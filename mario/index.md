@@ -70,7 +70,7 @@ Per far funzionare l'app ci appoggiamo a questi fornitori, che trattano i dati s
 | Supabase Inc. | database e autenticazione | server nell'Unione europea |
 | Expo (650 Industries Inc.) | invio delle notifiche | Stati Uniti |
 | Apple (APNs) e Google (Firebase Cloud Messaging) | consegna delle notifiche al telefono | Stati Uniti / UE |
-| Resend Inc. | invio delle email di servizio | Stati Uniti |
+| Google (Gmail) | invio delle email di servizio | Stati Uniti / UE |
 | GitHub Inc. | conservazione delle copie di sicurezza cifrate | Stati Uniti |
 | Apple / Google | accesso con Apple o Google, se lo scegli | Stati Uniti / UE |
 
