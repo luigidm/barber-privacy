@@ -1,9 +1,9 @@
-# Informativa sulla privacy, app "Mario De Martino Barber Salon"
+# Informativa sulla privacy, app "Barber Salon Mario De Martino"
 
 *Ultimo aggiornamento: 01/11/2026*
 
 
-Questa informativa spiega quali dati personali tratta l'app "Mario De Martino Barber Salon" (di seguito "l'app"),
+Questa informativa spiega quali dati personali tratta l'app "Barber Salon Mario De Martino" (di seguito "l'app"),
 perché, per quanto tempo e quali diritti hai, ai sensi del Regolamento (UE) 2016/679 ("GDPR").
 
 ## 1. Chi tratta i tuoi dati
