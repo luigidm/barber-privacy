@@ -8,8 +8,8 @@ perché, per quanto tempo e quali diritti hai, ai sensi del Regolamento (UE) 201
 
 ## 1. Chi tratta i tuoi dati
 
-**Titolare del trattamento**: Mario De Martino, titolare di *Mario De Martino Barber Salon*,
-[indirizzo del salone], [P. IVA], email [email del salone], telefono [telefono].
+**Titolare del trattamento**: Mario De Martino, titolare della ditta individuale *Barber Salon da Mario De Martino*,
+[via e numero civico], Salerno (SA), P. IVA 05117800655, email [email del salone], telefono [telefono].
 Il salone decide come usare i dati delle prenotazioni e della propria rubrica clienti.
 
 **Gestore tecnico dell'app**: Luigi De Martino, [email], che ha sviluppato l'app e la gestisce per conto del salone
