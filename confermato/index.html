@@ -1,0 +1,70 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Email confermata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap">
+<style>
+  /* Pagina aperta dal link di conferma dell'email (Site URL / emailRedirectTo di Supabase Auth).
+     Comune a tutte le app: ?app=<nome> mostra logo e pulsante dell'app giusta, altrimenti resta neutra. */
+  :root { --bg: #000; --fg: #F3EDE1; --dim: #F3EDE1A6; --gold: #B08D57; --goldl: #CDB28A; --ink: #15130F; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--fg); }
+  body { font: 16px/1.5 Inter, system-ui, -apple-system, sans-serif; display: flex; min-height: 100vh; min-height: 100dvh; }
+  main { margin: auto; width: 100%; max-width: 420px; padding: 32px max(24px, env(safe-area-inset-left)) 40px max(24px, env(safe-area-inset-right));
+         display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+  .logo { width: 220px; max-width: 70%; height: auto; }
+  .ok { width: 60px; height: 60px; border-radius: 50%; background: var(--gold); color: var(--ink); display: grid; place-items: center; }
+  .ko { background: none; border: 1.5px solid var(--goldl); color: var(--goldl); }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 32px; line-height: 1.15; margin: 4px 0 0; }
+  p { margin: 0; color: var(--dim); }
+  .btn { display: block; width: 100%; margin-top: 8px; padding: 15px 18px; border-radius: 999px; text-decoration: none; font-weight: 600;
+         color: var(--ink); background: linear-gradient(180deg, #C9A974, #A88650); }
+  .btn:focus-visible { outline: 2px solid var(--goldl); outline-offset: 3px; }
+  small { color: #F3EDE180; font-size: 13px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <img id="logo" class="logo" alt="" hidden>
+  <div id="icon" class="ok" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+  </div>
+  <h1 id="title">Email confermata</h1>
+  <p id="text">Il tuo account è attivo. Torna nell'app per prenotare.</p>
+  <a id="open" class="btn" href="#" hidden>Torna all'app</a>
+  <small id="note">Se hai aperto l'email dal computer, apri l'app sul telefono: entri da solo.</small>
+</main>
+<script>
+  // app conosciute: logo e indirizzo che apre l'app (scheme del tenant)
+  var APPS = {
+    mario: { name: "Barber Salon Mario De Martino", logo: "../mario/logo.jpg", open: "mariodm://" }
+  };
+  var q = new URLSearchParams(location.search);
+  var app = APPS[q.get("app")];
+  if (app) {
+    var logo = document.getElementById("logo");
+    logo.src = app.logo; logo.alt = app.name; logo.hidden = false;
+    var open = document.getElementById("open");
+    open.href = app.open; open.hidden = false;
+  }
+  // link scaduto o già usato: Supabase rimanda qui con #error=…&error_code=otp_expired
+  var h = new URLSearchParams(location.hash.slice(1));
+  if (h.get("error") || q.get("error")) {
+    document.title = "Link non valido";
+    document.getElementById("icon").className = "ok ko";
+    document.getElementById("icon").innerHTML = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 7v6M12 17h.01"/></svg>';
+    document.getElementById("title").textContent = "Link non più valido";
+    document.getElementById("text").textContent = "Il link scade dopo 24 ore e si può usare una sola volta. Se hai già confermato, accedi dall'app; altrimenti dall'app tocca “Rimanda l'email”.";
+    document.getElementById("note").hidden = true;
+  }
+</script>
+</body>
+</html>
