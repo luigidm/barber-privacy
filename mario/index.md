@@ -85,7 +85,7 @@ scrivendo a l.demartino18@gmail.com o contattando il salone. Risponderemo entro 
 
 **Eliminare l'account**: dall'app, *Profilo → Elimina account*. L'account e i dati collegati vengono cancellati; le
 prenotazioni passate restano al salone solo in forma anonima (senza nome né telefono) per i suoi conteggi, e
-quelle future vengono annullate.
+quelle future vengono annullate. Senza l'app: scrivi a mybarberapp.db@gmail.com dall'email dell'account (dettagli nella [pagina di assistenza](assistenza/)).
 
 Hai anche diritto di presentare reclamo al **Garante per la protezione dei dati personali** (www.garanteprivacy.it).
 
