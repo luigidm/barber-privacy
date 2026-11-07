@@ -13,7 +13,7 @@ Apri l'app, tocca "Prenota", scegli barbiere (o "Qualsiasi barbiere"), servizio,
 Per prenotare serve un account con email e numero di telefono.
 
 **Come annullo una prenotazione?**
-In "Prenotazioni" tocca "Annulla" sulla prenotazione. Si può annullare dall'app fino a 1 ora prima; dopo, chiama il salone.
+In "Prenotazioni" tocca "Annulla" sulla prenotazione. Si può annullare dall'app fino a 30 minuti prima; dopo, contatta il salone.
 
 **Quante prenotazioni posso avere?**
 Fino a 3 prenotazioni attive alla volta. Gli appuntamenti fissi (periodici) concordati con il salone non contano.
