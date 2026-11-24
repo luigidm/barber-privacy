@@ -1,0 +1,61 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scarica l'app · Barber Salon Mario De Martino</title>
+<meta name="description" content="Scarica l'app di Barber Salon Mario De Martino per prenotare taglio e barba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap">
+<style>
+  /* Pagina del QR code del salone: su iPhone apre l'App Store, su Android Google Play; altrimenti mostra i due pulsanti.
+     Il QR punta sempre qui, così non cambia anche se cambiano i link degli store (basta modificare STORE qui sotto). */
+  :root { --bg: #000; --fg: #F3EDE1; --dim: #F3EDE1A6; --gold: #B08D57; --goldl: #CDB28A; --ink: #15130F; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--fg); }
+  body { font: 16px/1.5 Inter, system-ui, -apple-system, sans-serif; display: flex; min-height: 100vh; min-height: 100dvh; }
+  main { margin: auto; width: 100%; max-width: 420px; padding: 32px max(24px, env(safe-area-inset-left)) 40px max(24px, env(safe-area-inset-right));
+         display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+  .logo { width: 220px; max-width: 70%; height: auto; }
+  h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; font-size: 30px; line-height: 1.15; margin: 4px 0 0; text-wrap: balance; }
+  p { margin: 0; color: var(--dim); }
+  .btns { display: grid; gap: 12px; width: 100%; margin-top: 8px; }
+  .btn { display: block; padding: 15px 18px; border-radius: 999px; text-decoration: none; font-weight: 600;
+         color: var(--ink); background: linear-gradient(180deg, #C9A974, #A88650); }
+  .btn.alt { background: none; color: var(--fg); border: 1.5px solid var(--goldl); }
+  .btn:focus-visible { outline: 2px solid var(--goldl); outline-offset: 3px; }
+  small { color: #F3EDE180; font-size: 13px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="../logo.jpg" alt="Barber Salon Mario De Martino">
+  <h1>Prenota dal telefono</h1>
+  <p>Scarica l'app di Barber Salon Mario De Martino: prenoti in pochi tocchi e ricevi i promemoria.</p>
+  <div class="btns">
+    <a id="ios" class="btn" href="#">Scarica su App Store (iPhone)</a>
+    <a id="android" class="btn alt" href="#">Scarica su Google Play (Android)</a>
+  </div>
+  <small>Via Posidonia 50, Salerno</small>
+</main>
+<script>
+  var STORE = {
+    ios: "https://apps.apple.com/it/app/id__APPLE_ID__",   // App Store Connect → Informazioni app → ID Apple
+    android: "https://play.google.com/store/apps/details?id=it.mariodemartino.barbersalon"
+  };
+  var iosReady = STORE.ios.indexOf("__") < 0;
+  document.getElementById("ios").href = STORE.ios;
+  document.getElementById("ios").hidden = !iosReady;
+  document.getElementById("android").href = STORE.android;
+  // apre subito lo store giusto (iPad con iPadOS si presenta come Mac: lo riconosce dal tocco)
+  var ua = navigator.userAgent;
+  var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (isIOS && iosReady) location.replace(STORE.ios);
+  else if (/Android/.test(ua)) location.replace(STORE.android);
+</script>
+</body>
+</html>
