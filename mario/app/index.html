@@ -40,22 +40,28 @@ layout: null
     <a id="ios" class="btn" href="#">Scarica su App Store (iPhone)</a>
     <a id="android" class="btn alt" href="#">Scarica su Google Play (Android)</a>
   </div>
+  <p id="soon" hidden>Su Android l'app arriva a breve su Google Play: riprova tra qualche giorno con lo stesso codice.</p>
   <small>Via Posidonia 50, Salerno</small>
 </main>
 <script>
   var STORE = {
     ios: "https://apps.apple.com/it/app/id__APPLE_ID__",   // App Store Connect → Informazioni app → ID Apple
-    android: "https://play.google.com/store/apps/details?id=it.mariodemartino.barbersalon"
+    android: "https://play.google.com/store/apps/details?id=it.mariodemartino.barbersalon",
+    androidReady: false   // true quando Google Play ha approvato l'app (prima il link dà "Elemento non trovato")
   };
   var iosReady = STORE.ios.indexOf("__") < 0;
   document.getElementById("ios").href = STORE.ios;
   document.getElementById("ios").hidden = !iosReady;
   document.getElementById("android").href = STORE.android;
+  document.getElementById("android").hidden = !STORE.androidReady;
   // apre subito lo store giusto (iPad con iPadOS si presenta come Mac: lo riconosce dal tocco)
   var ua = navigator.userAgent;
   var isIOS = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   if (isIOS && iosReady) location.replace(STORE.ios);
-  else if (/Android/.test(ua)) location.replace(STORE.android);
+  else if (/Android/.test(ua)) {
+    if (STORE.androidReady) location.replace(STORE.android);
+    else document.getElementById("soon").hidden = false;
+  }
 </script>
 </body>
 </html>
